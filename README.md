@@ -3,8 +3,7 @@
 
 ### Integrantes do grupo:
 
-* Aluno 1
-* Aluno 2
-* Aluno 3
-* Aluno 4
-* Aluno 5
+* Caio Henrique Barros
+* Denis Freitas
+* Gustavo Queiroz Silva
+* Igor Henrique Françozo
