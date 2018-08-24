@@ -4,7 +4,6 @@
 ## CDU001
 
 ### Fluxo principal = novo contato
-
 1.usuario escolhe a opção Inserir contato
 Sistema exibe formulario
 2.usuario informa o novo numero e informações do contato
