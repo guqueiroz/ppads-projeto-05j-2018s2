@@ -57,7 +57,7 @@ editar evento
 6. sistema exibe formulário do evento
 7. Sistema exibe evento no calendário
 
- Apagar contato
+ Apagar evento
 1. usuario escolhe a opção calendário
 2. Sistema exibe calendário
 3. usuario informa o dia do evento 
