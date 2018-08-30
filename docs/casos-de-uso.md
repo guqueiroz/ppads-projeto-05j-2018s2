@@ -27,16 +27,16 @@ editar contato
 ## CDU002
 
 ### Fluxo principal = Favoritar Contatos
-1. usuario escolhe o/os contato a ser favoritado e seleciona coração
-2. Sistema exibe um coração em frente o contato
+1. O usuario seleciona contato e aperta no coração
+2. Sistema preenche coração e coloca contato na lista de favoritos.
 
 Visualizar Favoritos
-1. O usuario seleciona favoritos
+1. O usuario seleciona favoritos.
 2. Sistema exibe lista de contatos favoritados
 
 Remover Favoritos
 1. O usuario seleciona contato e aperta no coração
-2. Sistema apaga coração do contato.
+2. Sistema apaga coração do contato e exclui da lista de favoritos.
 
 ## CDU003
 
