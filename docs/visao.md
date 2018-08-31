@@ -19,3 +19,4 @@
 * Java.
 * HTML.
 * CSS.
+* Banco de dados mySql.
