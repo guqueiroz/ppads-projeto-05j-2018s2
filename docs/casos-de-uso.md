@@ -37,11 +37,11 @@
 1. O usuário seleciona contato e seleciona a opção "Favoritar"
 2. Sistema exibe
 
-Visualizar Favoritos
+.Visualizar Favoritos
 1. O usuário seleciona favoritos.
 2. Sistema exibe lista de contatos favoritados
 
-Remover Favoritos
+.Remover Favoritos
 1. O usuário seleciona contato e aperta no coração
 2. Sistema apaga coração do contato e exclui da lista de favoritos.
 
