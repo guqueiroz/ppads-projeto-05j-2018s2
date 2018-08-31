@@ -1,12 +1,12 @@
 # Documento de visão
 
-## Nome do projeto: ___________________________________________
+## Nome do projeto: Agenda___________________________________________
 
 ## Principais funcionalidades (o que pessoas/empresas vão conseguir com este software?):
 
-* ______________________________________________________
-* ______________________________________________________
-* ______________________________________________________
+* Adicionar contato, remover e editar.
+* Favoritar contato.
+* Marcar eventos, editar e remover.
 
 ## Como as pessoas/empresas vão usar este software?
 
