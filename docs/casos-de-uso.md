@@ -35,7 +35,8 @@
 ## Feature - Favoritos
 ### Fluxo principal = Favoritar Contato
 1. O usuário seleciona contato e seleciona a opção "Favoritar"
-2. Sistema exibe
+2. Sistema exibe uma mensagem informando ao usuário que o cadastro foi favoritado
+3. Usuário passa a ser exibido na lista de favoritos
 
 .Visualizar Favoritos
 1. O usuário seleciona favoritos.
