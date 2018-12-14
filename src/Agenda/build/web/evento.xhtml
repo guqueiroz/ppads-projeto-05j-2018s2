@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./Modelo.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui">
+                
+    <ui:define name="content">
+        <h1> AGENDA DE EVENTOS </h1>
+            <h3> Cadastre um evento </h3>
+        <h:form>
+            <h:panelGrid columns="1">
+                
+                <p:outputLabel value="Evento"></p:outputLabel>
+                <p:inputText value="#{eventoBean.evento.evento}" size="50"></p:inputText>
+                
+                <p:outputLabel value="Data"></p:outputLabel>
+                <p:inputText value="#{eventoBean.evento.date}" size="50"></p:inputText>               
+                    
+                            
+            </h:panelGrid>
+            <br/>
+            <p:commandButton value="Salvar evento" action="#{eventoBean.salvarDados1()}" update="@form"></p:commandButton>
+            
+            <br/>
+           
+            <br/>
+            
+            <h1> Lista de eventos cadastrados </h1>
+            <br> </br>
+            <p:dataTable var = "eventoItem" value ="#{eventoBean.lista}" emptyMessage="Parece que você ainda não tem nenhum evento cadastrado!">
+                <p:column headerText="Evento">
+                    <h:outputLabel value="#{eventoItem.evento}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Data">
+                    <h:outputLabel value="#{eventoItem.date}"></h:outputLabel>
+                </p:column>
+                             
+           <p:column headerText="Excluir">
+                    <p:commandButton value ="Apagar" action="#{eventoBean.excluir1(eventoItem)}" update="@form" ></p:commandButton>
+                </p:column>
+                
+                <p:column headerText="Alterar">
+                    <p:commandButton value ="Editar" action="#{eventoBean.alterar1(eventoItem)}" update="@form" ></p:commandButton>
+                </p:column>
+                
+                
+            </p:dataTable>
+            <br>  </br>
+           <h:outputLink value="agenda.xhtml"  >AGENDA DE CONTATOS </h:outputLink>
+            
+        </h:form>
+       
+        
+        
+        
+    </ui:define>
+
+</ui:composition>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./Modelo.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui">
+                
+    <ui:define name="content">
+        <h1> AGENDA DE CONTATOS </h1>
+            <h3> Cadastre um contato </h3>
+        <h:form>
+            <h:panelGrid columns="1">
+                
+                <p:outputLabel value="Nome"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.nome}" size="50"></p:inputText>
+                
+                <p:outputLabel value="Email"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.email}" size="50"></p:inputText>
+                
+                <p:outputLabel value="Sexo"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.sexo}" size="20"></p:inputText>
+                
+                <p:outputLabel value="Telefone"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.telefone}" size="20"></p:inputText>
+                
+                <p:outputLabel value="Rua"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.rua}" size="50"></p:inputText>
+                
+                <p:outputLabel value="Complemento"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.complemento}" size="50"></p:inputText>
+                
+                <p:outputLabel value="Numero"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.numero}" size="20"></p:inputText>
+                
+                <p:outputLabel value="Bairro"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.bairro}" size="50"></p:inputText>
+                
+                <p:outputLabel value="Cidade"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.cidade}" size="50"></p:inputText>
+                
+                <p:outputLabel value="UF"></p:outputLabel>
+                <p:inputText value="#{contatoBean.contMode.uf}" size="10"></p:inputText>
+                    
+                            
+            </h:panelGrid>
+            <br/>
+            <p:commandButton value="Salvar contato" action="#{contatoBean.salvarDados()}" update="@form"></p:commandButton>
+            
+            <br/><br/>
+            
+            <h1> Lista de contatos cadastrados </h1>
+            <br> </br>
+            <p:dataTable var = "con" value ="#{contatoBean.lista}" emptyMessage="Parece que você ainda não tem nenhum contato cadastrado!">
+                <p:column headerText="Nome">
+                    <h:outputLabel value="#{con.nome}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Email">
+                    <h:outputLabel value="#{con.email}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Sexo">
+                    <h:outputLabel value="#{con.sexo}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Telefone">
+                    <h:outputLabel value="#{con.telefone}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Rua">
+                    <h:outputLabel value="#{con.rua}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Complemento">
+                    <h:outputLabel value="#{con.complemento}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Numero">
+                    <h:outputLabel value="#{con.numero}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Bairro">
+                    <h:outputLabel value="#{con.bairro}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Cidade">
+                    <h:outputLabel value="#{con.cidade}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="UF">
+                    <h:outputLabel value="#{con.uf}"></h:outputLabel>
+                </p:column>
+                
+                <p:column headerText="Excluir">
+                    <p:commandButton value ="Apagar" action="#{contatoBean.excluir(con)}" update="@form" ></p:commandButton>
+                </p:column>
+                
+                <p:column headerText="Alterar">
+                    <p:commandButton value ="Editar" action="#{contatoBean.alterar(con)}" update="@form" ></p:commandButton>
+                </p:column>
+           
+                
+                
+            </p:dataTable>
+                <br>  </br>
+           <h:outputLink value="evento.xhtml"  >AGENDA DE EVENTOS</h:outputLink>
+        </h:form>
+       
+        
+        
+        
+    </ui:define>
+
+</ui:composition>
